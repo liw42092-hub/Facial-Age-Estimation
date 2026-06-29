@@ -1,0 +1,22 @@
+item,value,description
+model,FaRL ViT-B/16 + GLAE routing age estimator,最终采用的人脸年龄估计模型
+dataset,UTKFace,实验数据集
+valid_samples,23687,清洗后有效样本数
+invalid_samples,21,文件名或年龄字段无效样本数
+split_seed,42,固定数据划分随机种子
+train_size,18951,训练集样本数
+val_size,2368,验证集样本数
+test_size,2368,测试集样本数
+image_size,256,输入图像尺寸
+batch_size,16,训练批大小
+vanilla_epochs,16,自然采样阶段训练 epoch 数
+balanced_epochs,7,平衡采样阶段训练 epoch 数
+best_epoch,balanced epoch 3,按验证集路由 MAE 选择出的最佳 epoch
+best_validation_mae,4.2101353229703129,最佳验证集 MAE
+final_test_mae,4.4008,最终测试集 MAE
+inference_mode,route,最终推理模式
+tta,flip,测试时增强方式
+local_blend,0.0,最终 checkpoint 不含局部 patch 头权重
+balance_bin_size,5,平衡采样年龄桶宽度
+balance_strength,0.75,平衡采样权重指数
+max_balance_weight,10.0,平衡采样最大权重
