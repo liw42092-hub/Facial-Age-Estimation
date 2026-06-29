@@ -1,0 +1,15 @@
+﻿{
+    "model_name":  "FaRL ViT-B/16 + GLAE routing age estimator",
+    "source_checkpoint":  "checkpoints\\farl_vit_glae\\best_model.pth",
+    "best_validation_mae":  4.2101353229703129,
+    "best_epoch":  "balanced epoch 3",
+    "data_dir":  "data\\UTKFace",
+    "split":  "seed=42, train/val/test=80/10/10",
+    "image_size":  256,
+    "mode":  "route",
+    "local_blend":  0.0,
+    "note":  "This is the selected best model according to validation MAE from the original FaRL-GLAE training run. The selected legacy checkpoint has no local patch-head tensors, so final inference uses local_blend=0.0.",
+    "final_validation_mae":  4.2101353229703129,
+    "final_test_mae":  4.4008,
+    "final_test_output_dir":  "results\\final_farl_report"
+}
